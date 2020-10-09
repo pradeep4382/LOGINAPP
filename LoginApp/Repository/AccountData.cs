@@ -13,13 +13,7 @@ namespace LoginApp.Repository
     public class AccountData : IAccountData
     {
 
-        public IEnumerable<Role> GetRoles()
-        {
-            using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["Mystring"].ToString()))
-            {
-                return con.Query<Role>("Usp_GetRoles", null, null, true, 0, CommandType.StoredProcedure).ToList();
-            }
-        }
+       
 
         public IEnumerable<Users> GetAllUsers()
         {

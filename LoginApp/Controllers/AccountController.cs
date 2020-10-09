@@ -125,46 +125,9 @@ namespace LoginApp.Controllers
             return View();
         }
 
-        [HttpPost]
-        [MyExceptionHandler]
-        [ValidateAntiForgeryToken]
-        public ActionResult RoleCreate(Role role)
-        {
-            if (ModelState.IsValid)
-            {
-                if (Roles.RoleExists(role.RoleName))
-                {
-                    ModelState.AddModelError("Error", "Rolename already exists");
-                    return View(role);
-                }
-                else
-                {
-                    Roles.CreateRole(role.RoleName);
-                    return RedirectToAction("RoleIndex", "Account");
-                }
-            }
-            else
-            {
-                ModelState.AddModelError("Error", "Please enter Username and Password");
-            }
-            return View(role);
-        }
 
 
-
-        [MyExceptionHandler]
-        public ActionResult RoleIndex()
-        {
-            var roles = objIAccountData.GetRoles();
-            return View(roles);
-        }
-
-        [MyExceptionHandler]
-        public ActionResult RoleDelete(string RoleName)
-        {
-            Roles.DeleteRole(RoleName);
-            return RedirectToAction("RoleIndex", "Account");
-        }
+        
 
         [HttpPost]
         [MyExceptionHandler]
