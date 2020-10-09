@@ -10,7 +10,7 @@ namespace LoginApp.Repository
     {
       
         IEnumerable<Users> GetAllUsers();
-        string GetRoleByUserID(string UserId);
+       
         string GetUserID_By_UserName(string UserName);
         string Get_checkUsernameExits(string username);
        

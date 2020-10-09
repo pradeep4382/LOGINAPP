@@ -53,16 +53,7 @@ namespace LoginApp.Repository
             }
         }
 
-        public bool Get_CheckUserRoles(string UserId)
-        {
-            using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["Mystring"].ToString()))
-            {
-                var para = new DynamicParameters();
-                para.Add("@UserId", UserId);
-                return con.Query<bool>("Usp_CheckUserRoles", para, null, true, 0, CommandType.StoredProcedure).SingleOrDefault();
-            }
-        }
-
+       
         public string GetUserName_BY_UserID(string UserId)
         {
             using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["Mystring"].ToString()))

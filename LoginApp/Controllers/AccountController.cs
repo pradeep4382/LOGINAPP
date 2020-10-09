@@ -42,30 +42,20 @@ namespace LoginApp.Controllers
             {
                 bool success =  WebSecurity.Login(login.username, login.password, false);
                 var UserID = GetUserID_By_UserName(login.username);
-                var LoginType = GetRoleBy_UserID(Convert.ToString(UserID));
-
+               
                 if (success == true)
                 {
-                    if (string.IsNullOrEmpty(Convert.ToString(LoginType)))
-                    {
-                        ModelState.AddModelError("Error", "Rights to User are not Provide Contact to Admin");
-                        return View(login);
-                    }
-                    else
-                    {
+                   
                         Session["Name"] = login.username;
                         Session["UserID"] = UserID;
-                        Session["LoginType"] = LoginType;
+                      
 
                         if (Roles.IsUserInRole(login.username, "Admin"))
                         {
                             return RedirectToAction("AdminDashboard", "Dashboard");
                         }
-                        else
-                        {
-                            return RedirectToAction("UserDashboard", "Dashboard");
-                        }
-                    }
+                        
+                    
                 }
                 else
                 {
@@ -196,19 +186,9 @@ namespace LoginApp.Controllers
             return View(VM);
         }
 
-        [HttpGet]
-        [AllowAnonymous]
-        public ActionResult AllRegisterUserDetails()
-        {
-            var Users = objIAccountData.GetAllUsers();
-            return View(Users);
-        }
+        
 
-        [NonAction]
-        public string GetRoleBy_UserID(string UserId)
-        {
-            return objIAccountData.GetRoleByUserID(UserId);
-        }
+        
 
         [NonAction]
         public string GetUserID_By_UserName(string UserName)

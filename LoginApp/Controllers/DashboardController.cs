@@ -19,12 +19,7 @@ namespace LoginApp.Controllers
             return View();
         }
 
-        [MyExceptionHandler]
-        [Authorize(Roles = "SystemUser")]
-        public ActionResult UserDashboard()
-        {
-            return View(AdminDashboard());
-        }
+
 
     }
 }
