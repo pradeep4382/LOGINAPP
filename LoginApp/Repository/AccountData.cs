@@ -15,13 +15,7 @@ namespace LoginApp.Repository
 
        
 
-        public IEnumerable<Users> GetAllUsers()
-        {
-            using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["Mystring"].ToString()))
-            {
-                return con.Query<Users>("Usp_GetAllUsers", null, null, true, 0, CommandType.StoredProcedure).ToList();
-            }
-        }
+       
 
         public string GetRoleByUserID(string UserId)
         {

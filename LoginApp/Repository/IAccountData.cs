@@ -9,7 +9,7 @@ namespace LoginApp.Repository
     public interface IAccountData
     {
       
-        IEnumerable<Users> GetAllUsers();
+        
        
         string GetUserID_By_UserName(string UserName);
         string Get_checkUsernameExits(string username);

@@ -108,12 +108,6 @@ namespace LoginApp.Controllers
         }
 
 
-        [HttpGet]
-        [MyExceptionHandler]
-        public ActionResult RoleCreate()
-        {
-            return View();
-        }
 
 
 
@@ -237,19 +231,6 @@ namespace LoginApp.Controllers
             return listrole;
         }
 
-        [NonAction]
-        public List<SelectListItem> GetAll_Users()
-        {
-            var Userlist = objIAccountData.GetAllUsers();
-            List<SelectListItem> listuser = new List<SelectListItem>();
-            listuser.Add(new SelectListItem { Text = "Select", Value = "0" });
-            foreach (var item in Userlist)
-            {
-                listuser.Add(new SelectListItem { Text = item.UserName, Value = item.Id });
-            }
-
-            return listuser;
-        }
-
+       
     }
 }

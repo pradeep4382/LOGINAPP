@@ -196,32 +196,15 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DataAccess\LoginContext.cs" />
     <Compile Include="Filters\MyErrorHandler.cs" />
     <Compile Include="Filters\MyExceptionHandler.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202010090337123_v1.cs" />
-    <Compile Include="Migrations\202010090337123_v1.designer.cs">
-      <DependentUpon>202010090337123_v1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202010090538023_v2.cs" />
-    <Compile Include="Migrations\202010090538023_v2.designer.cs">
-      <DependentUpon>202010090538023_v2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202010090550390_v21.cs" />
-    <Compile Include="Migrations\202010090550390_v21.designer.cs">
-      <DependentUpon>202010090550390_v21.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202010091308588_v11.cs" />
-    <Compile Include="Migrations\202010091308588_v11.designer.cs">
-      <DependentUpon>202010091308588_v11.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202010091311445_v12.cs" />
-    <Compile Include="Migrations\202010091311445_v12.designer.cs">
-      <DependentUpon>202010091311445_v12.cs</DependentUpon>
+    <Compile Include="Migrations\202010091444337_v1.cs" />
+    <Compile Include="Migrations\202010091444337_v1.designer.cs">
+      <DependentUpon>202010091444337_v1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ChangepasswordVM.cs" />
@@ -380,9 +363,6 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Dashboard\AdminDashboard.cshtml" />
     <Content Include="Views\Account\Changepassword.cshtml" />
     <Content Include="Views\Shared\_LoginLayout.cshtml" />
@@ -409,20 +389,8 @@
     <Analyzer Include="..\packages\Microsoft.NetFramework.Analyzers.3.3.0\analyzers\dotnet\cs\Microsoft.NetFramework.CSharp.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202010090337123_v1.resx">
-      <DependentUpon>202010090337123_v1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202010090538023_v2.resx">
-      <DependentUpon>202010090538023_v2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202010090550390_v21.resx">
-      <DependentUpon>202010090550390_v21.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202010091308588_v11.resx">
-      <DependentUpon>202010091308588_v11.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202010091311445_v12.resx">
-      <DependentUpon>202010091311445_v12.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202010091444337_v1.resx">
+      <DependentUpon>202010091444337_v1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
