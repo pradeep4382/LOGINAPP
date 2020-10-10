@@ -1,0 +1,155 @@
+﻿@model LoginApp.Models.LoginDetails
+
+@{
+    ViewBag.Title = "SignUp";
+}
+
+<h2>SignUp</h2>
+<h2>SignUp</h2>
+<script src="~/Scripts/jquery-1.11.1.js"></script>
+
+<script src="~/Scripts/jquery-ui.min.js"></script>
+<link href="~/Scripts/jquery-ui.min.css" rel="stylesheet" />
+
+<script src="~/bootstrap/js/bootstrap.min.js"></script>
+<link href="~/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+<script src="~/Scripts/jquery-1.7.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<link href="~/Content/Site.css" rel="stylesheet" />
+
+<script type="text/javascript">
+    $.noConflict();
+</script>
+
+
+
+
+<div class="container">
+
+    <div class="logo col-sm-12 text-center col-md-12 "> </div>
+
+    <div class="clearfix"></div>
+
+
+
+
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <fieldset>
+            <legend class="legend">Register</legend>
+
+            <div class="panel">
+
+                <div class="panel-body">
+
+
+
+                    <div class="col-md-6 col-sm-6">
+                        <div class="row">
+
+                            <div class="form-group">
+                                <div class="col-md-6 col-sm-6">
+                                    First Name
+                                </div>
+
+                                <div class="col-md-6 col-sm-6">
+                                    @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(m => m.FirstName)
+
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-6 col-sm-6">
+                                    Last Name
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(m => m.LastName)
+                                </div>
+
+
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-6 col-sm-6">
+                                    User Name
+                                </div>
+
+                                <div class="col-md-6 col-sm-6">
+                                    @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(m => m.UserName)
+
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+
+
+
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-md-6 col-sm-6">
+                                    Password
+                                </div>
+
+                                <div class="col-md-6 col-sm-6">
+                                    @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(m => m.Password)
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-6 col-sm-6">
+                                    Confirm Password
+                                </div>
+
+
+                                <div class="col-md-6 col-sm-6">
+
+                                    @Html.PasswordFor(m => m.Confirmpassword, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(m => m.Confirmpassword)
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <input id="Submit" class="btn btn-success" name="actionType" type="submit" value="Save" />
+
+                            @Html.ActionLink("Cancel", "Login", "Account", new { @class = "btn btn-success" })
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+        </fieldset>
+    }
+</div>
+
+
+

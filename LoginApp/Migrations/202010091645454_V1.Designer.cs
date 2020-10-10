@@ -7,13 +7,13 @@ namespace LoginApp.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class v1 : IMigrationMetadata
+    public sealed partial class V1 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(v1));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(V1));
         
         string IMigrationMetadata.Id
         {
-            get { return "202010091444337_v1"; }
+            get { return "202010091645454_V1"; }
         }
         
         string IMigrationMetadata.Source
