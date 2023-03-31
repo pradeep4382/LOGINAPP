@@ -7,6 +7,13 @@ using LoginApp.Models;
 using LoginApp.Models1;
 
 
+
+using System.Data.Entity;
+using System.Linq;
+using System.Web;
+using LoginApp.Models;
+using LoginApp.Models1;
+
 namespace LoginApp.DataAccess
 {
     public class LoginContext : DbContext
