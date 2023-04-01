@@ -23,7 +23,15 @@ namespace LoginApp.DataAccess
            Database.SetInitializer(new MigrateDatabaseToLatestVersion<LoginContext, Migrations.Configuration>());
         }
 
-        
+        public LoginContext() : base("name=Mystring")
+        {
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<LoginContext, Migrations.Configuration>());
+        }
+
+        public LoginContext() : base("name=Mystring")
+        {
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<LoginContext, Migrations.Configuration>());
+        }
         public DbSet<LoginDetails> TestLogins { set; get; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
